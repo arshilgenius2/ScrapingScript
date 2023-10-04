@@ -9,6 +9,10 @@ sender_password = 'dadapaqzfunezaiu'
 receiver_email = 'arshilgenius@gmail.com'
 
 
+# Set up the SMTP server
+smtp_server = 'smtp.gmail.com'
+smtp_port = 587
+
 # Words to skip in post titles
 skip_words = [
   "music", "dance", "chess", "rubiks cube", "quran", "tamil",
