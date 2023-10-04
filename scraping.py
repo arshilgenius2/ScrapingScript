@@ -115,5 +115,5 @@ while True:
 
 
 
-  # Wait for 60  minutes before scraping again
-  time.sleep(300)
+  # Wait for 120  minutes before scraping again
+  time.sleep(600)
