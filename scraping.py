@@ -112,7 +112,16 @@ while True:
         f"Link: {post_link}\nTitle: {post_title}\nAmount: {post_amount}\nLocation: {post_location}\nDescription: {post_description}\n"
       )
 
-
+  # Send email with new scraped data
+  if new_scraped_data:
+    with smtplib.SMTP(smtp_server, smtp_port) as server:
+      server.starttls()
+      server.login(sender_email, sender_password)
+      message = 'Subject: TeacherOn Tutor Jobs\n\n' + '\n'.join(
+        new_scraped_data)
+      message = message.encode("utf-8")  # encode message as UTF-8
+      server.sendmail(sender_email, receiver_email, message)
+      
 
 
   # Wait for 60  minutes before scraping again
