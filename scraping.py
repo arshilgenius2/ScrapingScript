@@ -111,6 +111,10 @@ while True:
       scraped_data.append(
         f"Link: {post_link}\nTitle: {post_title}\nAmount: {post_amount}\nLocation: {post_location}\nDescription: {post_description}\n"
       )
+  
+  # Compare current scraped data with previous scraped data
+  new_scraped_data = list(set(scraped_data) - set(prev_scraped_data))
+  prev_scraped_data = scraped_data
 
 
 
